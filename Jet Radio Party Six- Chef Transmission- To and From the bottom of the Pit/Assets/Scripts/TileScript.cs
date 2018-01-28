@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TileScript : MonoBehaviour {
-    public GameObject tileQuad;
+    public GameObject[] tileQuads = new GameObject[5];
     public GameObject gameCube;
+
+    public bool isAngled = false;
+    public bool isCube = false;
 
     int currentTexture;
     float height=0;
@@ -12,7 +15,7 @@ public class TileScript : MonoBehaviour {
 
     public Texture2D[] textures;
 
-    Material tileMaterial;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -25,9 +28,15 @@ public class TileScript : MonoBehaviour {
     
     //Update the current texture
     public void UpdateTexture(int newTexture) {
-        tileMaterial = tileQuad.GetComponent<Renderer>().material;
+        
+
+        for (int i = 0; i < tileQuads.Length; i++) {
+            Material tileMaterial;
+            tileMaterial = tileQuads[i].GetComponent<Renderer>().material;
+            tileMaterial.mainTexture = textures[newTexture];
+        }
         currentTexture = newTexture;
-        tileMaterial.mainTexture = textures[newTexture];
+        
     }
 
     public void testFunction() {
@@ -52,13 +61,21 @@ public class TileScript : MonoBehaviour {
 
     public void setIsVisible(bool isVisible) {
         this.isVisible = isVisible;
-        MeshRenderer mr = tileQuad.GetComponent<MeshRenderer>();
-        mr.enabled = isVisible;
+
+        for (int i = 0; i < tileQuads.Length; i++)
+        {
+            //tileQuads[i].GetComponent<MeshRenderer>().enabled = isVisible;
+        }        
     }
 
     public void setGameCubeVisibility(bool isVisible)
     {
         MeshRenderer mr = gameCube.GetComponent<MeshRenderer>();
         mr.enabled = isVisible;
+    }
+
+    public void setGameCubeHeight(float scalar) {
+        Transform cubeTransform = gameCube.GetComponent<Transform>();
+        cubeTransform.localScale = new Vector3(1, scalar, 1);
     }
 }
