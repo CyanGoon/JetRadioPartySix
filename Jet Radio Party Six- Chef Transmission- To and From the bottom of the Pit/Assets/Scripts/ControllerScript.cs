@@ -11,19 +11,22 @@ public class ControllerScript : MonoBehaviour {
     static int mapSize = 100;
     private GameObject[,] gameTiles = new GameObject[mapSize,mapSize];
 
-    int mapHeightScale = 10;
-    int mapChangeDensity = 10;
+    int mapHeightScale = 20;
+    int mapChangeDensity = 5;
     float mapHeightIncrement = 0.5f;
+
+    float mapSeed;
 
     // Use this for initialization
     void Start () {
+        mapSeed = Random.value * 100;
         
         for (int y = 0; y < mapSize; y++)
         {
             for (int x = 0; x < mapSize; x++)
             {
                 //float height = Mathf.Round(Random.value * 3)/2;
-                float height = Mathf.Round(Mathf.PerlinNoise((float)x/ mapSize* mapChangeDensity, (float)y/ mapSize* mapChangeDensity) *mapHeightScale)*mapHeightIncrement;
+                float height = Mathf.Round(Mathf.PerlinNoise((mapSeed + (float)x)/ mapSize* mapChangeDensity, (mapSeed + (float)y)/ mapSize* mapChangeDensity) *mapHeightScale)*mapHeightIncrement;
                 tile = Instantiate(gameTile, new Vector3(x, height, y), Quaternion.identity);
 
                 gameTiles[x, y] = tile;
@@ -34,7 +37,7 @@ public class ControllerScript : MonoBehaviour {
                 if (tileScript.getHeight() <= 0.5) {
                     tileScript.UpdateTexture(1);
                 }
-                if (tileScript.getHeight() >= 4) {
+                if (tileScript.getHeight() >= 19) {
                     tileScript.UpdateTexture(2);
                 }
 
