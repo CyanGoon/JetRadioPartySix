@@ -6,12 +6,15 @@ public class TileScript : MonoBehaviour {
     public GameObject[] tileQuads = new GameObject[5];
     public GameObject gameCube;
 
+    public bool isDiscovered = false;
+
     public bool isAngled = false;
     public bool isCube = false;
 
     int currentTexture;
     float height=0;
-    private bool isVisible = false;
+    public bool isVisible = false;
+    public bool cubeIsVisible=false;
 
     public Texture2D[] textures;
 
@@ -72,6 +75,7 @@ public class TileScript : MonoBehaviour {
     {
         MeshRenderer mr = gameCube.GetComponent<MeshRenderer>();
         mr.enabled = isVisible;
+        cubeIsVisible = isVisible;
     }
 
     public void setGameCubeHeight(float scalar) {

@@ -1,0 +1,580 @@
+fileFormatVersion: 2
+guid: 27b1c4f3ae379d948ab4e4ce9058549d
+timeCreated: 1517166056
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: characterSpriteMap_0
+    21300002: characterSpriteMap_1
+    21300004: characterSpriteMap_2
+    21300006: characterSpriteMap_3
+    21300008: characterSpriteMap_4
+    21300010: characterSpriteMap_5
+    21300012: characterSpriteMap_6
+    21300014: characterSpriteMap_7
+    21300016: characterSpriteMap_8
+    21300018: characterSpriteMap_9
+    21300020: characterSpriteMap_10
+    21300022: characterSpriteMap_11
+    21300024: characterSpriteMap_12
+    21300026: characterSpriteMap_13
+    21300028: characterSpriteMap_14
+    21300030: characterSpriteMap_15
+    21300032: characterSpriteMap_16
+    21300034: characterSpriteMap_17
+    21300036: characterSpriteMap_18
+    21300038: characterSpriteMap_19
+    21300040: characterSpriteMap_20
+    21300042: characterSpriteMap_21
+    21300044: characterSpriteMap_22
+    21300046: characterSpriteMap_23
+    21300048: characterSpriteMap_24
+    21300050: characterSpriteMap_25
+    21300052: characterSpriteMap_26
+    21300054: characterSpriteMap_27
+    21300056: characterSpriteMap_28
+    21300058: characterSpriteMap_29
+    21300060: characterSpriteMap_30
+    21300062: characterSpriteMap_31
+    21300064: characterSpriteMap_32
+    21300066: characterSpriteMap_33
+    21300068: characterSpriteMap_34
+    21300070: characterSpriteMap_35
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: characterSpriteMap_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_4
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_5
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_6
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_8
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_9
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_10
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_11
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 182
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_13
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_14
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_15
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_16
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_17
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_18
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_19
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_20
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_21
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_22
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_23
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 121
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_25
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_26
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_27
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_28
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_29
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_30
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_31
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_32
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_33
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_34
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterSpriteMap_35
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 60
+        width: 31
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

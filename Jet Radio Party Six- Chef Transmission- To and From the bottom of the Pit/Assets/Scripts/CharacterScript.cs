@@ -5,6 +5,11 @@ using UnityEngine;
 public class CharacterScript : MonoBehaviour {
     Rigidbody rb;
 
+    public Sprite[] runningLeft;
+    public Sprite[] runningRight;
+    public Sprite standing;
+    public Sprite jumping;
+
     string Class = "Honey DILF";
 
 	// Use this for initialization
