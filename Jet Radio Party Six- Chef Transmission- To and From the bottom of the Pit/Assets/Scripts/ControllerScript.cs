@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ControllerScript : MonoBehaviour {
     public GameObject gameTile;
+    public GameObject crystal;
 
     public GameObject player1;
 
@@ -30,6 +31,9 @@ public class ControllerScript : MonoBehaviour {
                 //float height = Mathf.Round(Random.value * 3)/2;
                 float height = Mathf.Round(Mathf.PerlinNoise((mapSeed + (float)x)/ mapSize* mapChangeDensity, (mapSeed + (float)y)/ mapSize* mapChangeDensity) *mapHeightScale)*mapHeightIncrement;
                 tile = Instantiate(gameTile, new Vector3(x, height, y), Quaternion.identity);
+
+                if (x == Mathf.Round(mapSize / 2) && y == Mathf.Round(mapSize / 2))
+                    player1.transform.position = new Vector3(x, height+1, y);
 
                 gameTiles[x, y] = tile;
 
@@ -125,6 +129,8 @@ public class ControllerScript : MonoBehaviour {
         TileScript currentTileScript = currentTile.GetComponent<TileScript>();
 
         currentTileScript.UpdateTexture(9+(int)(Random.value*2));
+
+        Instantiate(crystal, new Vector3(currentTile.transform.position.x, currentTile.transform.position.y+0.25f, currentTile.transform.position.z), player1.transform.rotation);
 
         if (Random.value * 10 > 3)
             spreadSalt((int)(x + Random.value * 3 - 1), (int)(y + Random.value * 3 - 1));
