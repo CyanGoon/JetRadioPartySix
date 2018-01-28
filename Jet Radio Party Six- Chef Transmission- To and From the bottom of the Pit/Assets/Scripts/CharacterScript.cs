@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterScript : MonoBehaviour {
     Rigidbody rb;
 
+    string Class = "Honey DILF";
+
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
