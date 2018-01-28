@@ -38,7 +38,7 @@ public class ControllerScript : MonoBehaviour {
                     tileScript.UpdateTexture(1);
                 }
                 if (tileScript.getHeight() >= 6.5) {
-                    tileScript.UpdateTexture(2);
+                    tileScript.UpdateTexture(2+(int)(Random.value*3));
                 }
 
                 //angleTileUpInDirection(ref tileScript, new Vector3(0, 0, 1));
