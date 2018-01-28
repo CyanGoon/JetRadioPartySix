@@ -37,7 +37,7 @@ public class ControllerScript : MonoBehaviour {
                 if (tileScript.getHeight() <= 0.5) {
                     tileScript.UpdateTexture(1);
                 }
-                if (tileScript.getHeight() >= 19) {
+                if (tileScript.getHeight() >= 6.5) {
                     tileScript.UpdateTexture(2);
                 }
 
