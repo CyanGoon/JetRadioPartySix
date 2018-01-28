@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ControllerScript : MonoBehaviour {
     public GameObject gameTile;
+    public GameObject crystal;
+
+    public GameObject player1;
 
     private GameObject tile;
     private TileScript tileScript;
@@ -29,6 +32,9 @@ public class ControllerScript : MonoBehaviour {
                 float height = Mathf.Round(Mathf.PerlinNoise((mapSeed + (float)x)/ mapSize* mapChangeDensity, (mapSeed + (float)y)/ mapSize* mapChangeDensity) *mapHeightScale)*mapHeightIncrement;
                 tile = Instantiate(gameTile, new Vector3(x, height, y), Quaternion.identity);
 
+                if (x == Mathf.Round(mapSize / 2) && y == Mathf.Round(mapSize / 2))
+                    player1.transform.position = new Vector3(x, height+1, y);
+
                 gameTiles[x, y] = tile;
 
                 tileScript = (TileScript)tile.GetComponent<TileScript>();
@@ -42,10 +48,9 @@ public class ControllerScript : MonoBehaviour {
                 }
 
                 //angleTileUpInDirection(ref tileScript, new Vector3(0, 0, 1));
-                tileScript.setIsVisible(false);
-                tileScript.setGameCubeVisibility(true);
                 tileScript.setIsVisible(true);
                 tileScript.setGameCubeVisibility(false);
+
 
             }
         }
@@ -93,17 +98,47 @@ public class ControllerScript : MonoBehaviour {
                     currentTileScript.getTransform().rotation = Quaternion.identity;
                 }
 
-                
+                if ((int)(Random.value * 100) == 1) {
+                    spreadFungus(x,y);                    
+                }
+
+                if ((int)(Random.value * 100) == 1)
+                {
+                    spreadSalt(x, y);
+                }
 
             }
         }
 
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+    public void spreadFungus(int x, int y) {
+        GameObject currentTile = gameTiles[x, y];
+        TileScript currentTileScript = currentTile.GetComponent<TileScript>();
+
+        currentTileScript.UpdateTexture(7);
+
+        if (Random.value * 10 > 3)
+            spreadFungus((int)(x+Random.value*3-1), (int)(y+ Random.value * 3 - 1));
+    }
+
+    public void spreadSalt(int x, int y)
+    {
+        GameObject currentTile = gameTiles[x, y];
+        TileScript currentTileScript = currentTile.GetComponent<TileScript>();
+
+        currentTileScript.UpdateTexture(9+(int)(Random.value*2));
+
+        Instantiate(crystal, new Vector3(currentTile.transform.position.x, currentTile.transform.position.y+0.25f, currentTile.transform.position.z), player1.transform.rotation);
+
+        if (Random.value * 10 > 3)
+            spreadSalt((int)(x + Random.value * 3 - 1), (int)(y + Random.value * 3 - 1));
+    }
+
+    // Update is called once per frame
+    void Update () {
+        discoverFrom((int)player1.transform.position.x, (int)player1.transform.position.z);
 	}
 
 
@@ -132,5 +167,20 @@ public class ControllerScript : MonoBehaviour {
         scaleVector += new Vector3(1, 1, 1);
 
         tileScript.getTransform().localScale = scaleVector;
+    }
+
+    public void discoverFrom(int x, int y)
+    {
+        for (int i = -1; i <= 1; i++)
+        {
+            for (int j = -1; j <= 1; j++)
+            {
+                GameObject adjacentTile = gameTiles[x + i, y + j];
+                TileScript adjacentTileScript = adjacentTile.GetComponent<TileScript>();
+                adjacentTileScript.isDiscovered = true;
+
+
+            }
+        }
     }
 }
