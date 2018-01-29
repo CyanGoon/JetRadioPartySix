@@ -207,6 +207,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTile: {fileID: 1595164785080476, guid: aa575b28b0d90944083d4226fcab1ee9, type: 2}
   crystal: {fileID: 1890715936821316, guid: b9b5eedb4f671e24a98a7385f5a92dc3, type: 2}
+  directionalLight: {fileID: 1847205011}
+  timeOfDay: 0
+  timeIsGoingUp: 1
   player1: {fileID: 1771070126}
 --- !u!4 &725615251
 Transform:
@@ -738,7 +741,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -748,7 +751,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:

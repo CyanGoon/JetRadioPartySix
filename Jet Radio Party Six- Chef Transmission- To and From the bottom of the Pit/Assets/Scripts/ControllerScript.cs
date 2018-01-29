@@ -5,6 +5,10 @@ using UnityEngine;
 public class ControllerScript : MonoBehaviour {
     public GameObject gameTile;
     public GameObject crystal;
+    public GameObject directionalLight;
+
+    public float timeOfDay = 0;
+    public bool timeIsGoingUp = true;
 
     public GameObject player1;
 
@@ -139,6 +143,20 @@ public class ControllerScript : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         discoverFrom((int)player1.transform.position.x, (int)player1.transform.position.z);
+
+        if (timeIsGoingUp)
+        {
+            timeOfDay += Time.deltaTime;
+            if (timeOfDay > 100)
+                timeIsGoingUp = false;
+        }
+        else {
+            timeOfDay -= Time.deltaTime;
+            if (timeOfDay < 0)
+                timeIsGoingUp = true;
+        }
+
+        directionalLight.GetComponent<Light>().intensity = timeOfDay/50;
 	}
 
 
@@ -171,15 +189,14 @@ public class ControllerScript : MonoBehaviour {
 
     public void discoverFrom(int x, int y)
     {
-        for (int i = -1; i <= 1; i++)
+        for (int i = -2; i <= 2; i++)
         {
-            for (int j = -1; j <= 1; j++)
+            for (int j = -2; j <= 2; j++)
             {
                 GameObject adjacentTile = gameTiles[x + i, y + j];
                 TileScript adjacentTileScript = adjacentTile.GetComponent<TileScript>();
-                adjacentTileScript.isDiscovered = true;
 
-
+                adjacentTileScript.discover();
             }
         }
     }

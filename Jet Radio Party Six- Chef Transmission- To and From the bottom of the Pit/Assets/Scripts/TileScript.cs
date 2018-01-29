@@ -5,6 +5,7 @@ using UnityEngine;
 public class TileScript : MonoBehaviour {
     public GameObject[] tileQuads = new GameObject[5];
     public GameObject gameCube;
+    public GameObject fog;
 
     public bool isDiscovered = false;
 
@@ -81,5 +82,10 @@ public class TileScript : MonoBehaviour {
     public void setGameCubeHeight(float scalar) {
         Transform cubeTransform = gameCube.GetComponent<Transform>();
         cubeTransform.localScale = new Vector3(1, scalar, 1);
+    }
+
+    public void discover() {
+        isDiscovered = true;
+        fog.GetComponent<MeshRenderer>().enabled = false;
     }
 }

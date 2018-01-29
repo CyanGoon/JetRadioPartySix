@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour {
-    public GameObject character;
-
-    
+    public GameObject character;    
 
 	// Use this for initialization
 	void Start () {
