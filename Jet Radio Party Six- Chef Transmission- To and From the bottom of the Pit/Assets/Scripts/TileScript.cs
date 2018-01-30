@@ -87,5 +87,6 @@ public class TileScript : MonoBehaviour {
     public void discover() {
         isDiscovered = true;
         fog.GetComponent<MeshRenderer>().enabled = false;
+        fog.transform.position = (new Vector3(0,-1000,0));
     }
 }

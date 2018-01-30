@@ -13,6 +13,7 @@ public class slugBehaviour : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -24,7 +25,9 @@ public class slugBehaviour : MonoBehaviour
         {
             Vector3 difference = target.transform.position - transform.position;
             difference = difference.normalized;
+
             rb.AddForce(difference * (420 /distance));
+            //rb.velocity = difference * (420 / distance);
         }
 
     }

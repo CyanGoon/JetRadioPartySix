@@ -7,7 +7,10 @@ public class ControllerScript : MonoBehaviour {
     public GameObject crystal;
     public GameObject directionalLight;
 
-    public float timeOfDay = 0;
+    public GameObject fungalTower;
+    public GameObject slug;
+
+    public float timeOfDay = 50;
     public bool timeIsGoingUp = true;
 
     public GameObject player1;
@@ -123,8 +126,19 @@ public class ControllerScript : MonoBehaviour {
 
         currentTileScript.UpdateTexture(7);
 
+        GameObject sloathe = Instantiate(slug, new Vector3(currentTile.transform.position.x, currentTile.transform.position.y + 3.25f, currentTile.transform.position.z), player1.transform.rotation);
+        sloathe.GetComponent<slugBehaviour>().setTarget(player1);
+
         if (Random.value * 10 > 3)
-            spreadFungus((int)(x+Random.value*3-1), (int)(y+ Random.value * 3 - 1));
+        {
+            int desiredPosx = (int)(x + Random.value * 3 - 1);
+            int desiredPosy = (int)(y + Random.value * 3 - 1);
+            if(desiredPosx>0&&
+                desiredPosx<mapSize&&
+                desiredPosy>0&&
+                desiredPosy<mapSize)
+            spreadFungus(desiredPosx, desiredPosy);
+        }
     }
 
     public void spreadSalt(int x, int y)
@@ -134,10 +148,22 @@ public class ControllerScript : MonoBehaviour {
 
         currentTileScript.UpdateTexture(9+(int)(Random.value*2));
 
-        Instantiate(crystal, new Vector3(currentTile.transform.position.x, currentTile.transform.position.y+0.25f, currentTile.transform.position.z), player1.transform.rotation);
+        GameObject fungoise = Instantiate(fungalTower, new Vector3(currentTile.transform.position.x, currentTile.transform.position.y+0.25f, currentTile.transform.position.z), player1.transform.rotation);
+        fungoise.GetComponent<fungalTowerBehaviour>().setTarget(player1);
+        fungoise.transform.Rotate(0,Random.value*360,0);
+        float scale = Random.value;
+        fungoise.transform.localScale = new Vector3(scale,scale,scale);
 
         if (Random.value * 10 > 3)
-            spreadSalt((int)(x + Random.value * 3 - 1), (int)(y + Random.value * 3 - 1));
+        {
+            int desiredPosx = (int)(x + Random.value * 3 - 1);
+            int desiredPosy = (int)(y + Random.value * 3 - 1);
+            if (desiredPosx > 0 &&
+                desiredPosx < mapSize &&
+                desiredPosy > 0 &&
+                desiredPosy < mapSize)
+                spreadSalt(desiredPosx, desiredPosy);
+        }
     }
 
     // Update is called once per frame

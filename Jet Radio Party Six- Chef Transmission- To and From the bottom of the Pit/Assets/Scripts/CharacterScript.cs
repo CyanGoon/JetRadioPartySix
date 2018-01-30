@@ -72,7 +72,7 @@ public class CharacterScript : MonoBehaviour {
     {
         if (Input.GetButtonDown("xbox_controller1_a")&&rb.velocity.y<=0.5)
         {
-            rb.AddForce(new Vector3(0, 200, 0));
+            rb.AddForce(new Vector3(0, 100, 0));
             Debug.Log("Jump");
             
         }
